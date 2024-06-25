@@ -28,3 +28,9 @@ pdftk \
   output.pdf
 ```
 
+### djvu to pdf
+
+Take a djvu file, convert to pdf.
+```
+djvups input.djvu | ps2pdf - output.pdf
+```

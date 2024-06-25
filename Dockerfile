@@ -13,3 +13,6 @@ RUN cd pdftk && mkdir lib && \
 RUN cd pdftk && ant jar
 
 RUN echo "alias pdftk='java -cp /work-area/pdftk/build/jar/pdftk.jar:lib/bcprov.jar:lib/commons-lang3.jar com.gitlab.pdftk_java.pdftk'" >> /etc/bash.bashrc
+
+# djvups input.djvu | ps2pdf - output.pdf
+RUN apt-get -y install djvulibre-bin ghostscript
